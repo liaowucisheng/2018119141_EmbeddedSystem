@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"keycontrolbreathandtwinkle\main.o"
+"keycontrolbreathandtwinkle\gpio.o"
+"keycontrolbreathandtwinkle\stm32l4xx_it.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_msp.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_tim.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_tim_ex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_i2c.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_i2c_ex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_rcc.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_rcc_ex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_flash.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_flash_ex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_flash_ramfunc.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_gpio.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_dma.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_dma_ex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_pwr.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_pwr_ex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_cortex.o"
+"keycontrolbreathandtwinkle\stm32l4xx_hal_exti.o"
+"keycontrolbreathandtwinkle\system_stm32l4xx.o"
+"keycontrolbreathandtwinkle\startup_stm32l431xx.o"
+--library_type=microlib --nodebug --strict --scatter "KEYControlBreathAndTwinkle\KEYControlBreathAndTwinkle.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "KEYControlBreathAndTwinkle.map" -o KEYControlBreathAndTwinkle\KEYControlBreathAndTwinkle.axf

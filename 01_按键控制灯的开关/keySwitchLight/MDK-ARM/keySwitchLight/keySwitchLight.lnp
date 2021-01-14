@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+".\keyswitchlight\main.o"
+".\keyswitchlight\gpio.o"
+".\keyswitchlight\stm32l4xx_it.o"
+".\keyswitchlight\stm32l4xx_hal_msp.o"
+".\keyswitchlight\stm32l4xx_hal_tim.o"
+".\keyswitchlight\stm32l4xx_hal_tim_ex.o"
+".\keyswitchlight\stm32l4xx_hal.o"
+".\keyswitchlight\stm32l4xx_hal_i2c.o"
+".\keyswitchlight\stm32l4xx_hal_i2c_ex.o"
+".\keyswitchlight\stm32l4xx_hal_rcc.o"
+".\keyswitchlight\stm32l4xx_hal_rcc_ex.o"
+".\keyswitchlight\stm32l4xx_hal_flash.o"
+".\keyswitchlight\stm32l4xx_hal_flash_ex.o"
+".\keyswitchlight\stm32l4xx_hal_flash_ramfunc.o"
+".\keyswitchlight\stm32l4xx_hal_gpio.o"
+".\keyswitchlight\stm32l4xx_hal_dma.o"
+".\keyswitchlight\stm32l4xx_hal_dma_ex.o"
+".\keyswitchlight\stm32l4xx_hal_pwr.o"
+".\keyswitchlight\stm32l4xx_hal_pwr_ex.o"
+".\keyswitchlight\stm32l4xx_hal_cortex.o"
+".\keyswitchlight\stm32l4xx_hal_exti.o"
+".\keyswitchlight\system_stm32l4xx.o"
+".\keyswitchlight\startup_stm32l431xx.o"
+--library_type=microlib --nodebug --strict --scatter ".\keySwitchLight\keySwitchLight.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "keySwitchLight.map" -o .\keySwitchLight\keySwitchLight.axf
