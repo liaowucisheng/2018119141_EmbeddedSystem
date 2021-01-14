@@ -42,9 +42,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 enum LEDmode{
-	flashingMode = 0,  	   //ÉÁË¸Ä£Ê½
-	breathingMode = 1  //ºôÎüÄ£Ê½
-} chooseLEDmode = flashingMode;
+	flashingMode = 0,  	   //è®¾ç½®é—ªçƒä¸º0
+	breathingMode = 1  		 //è®¾ç½®å‘¼å¸ä¸º1
+	} chooseLEDmode = flashingMode;  //åˆå§‹è¿è¡Œæ—¶ä¸ºé—ªçƒ
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -98,11 +98,11 @@ int main(void)
   {
     /* USER CODE END WHILE */
 		if(chooseLEDmode == flashingMode){
-			HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin); //LEDµÆÁÁÃğÇĞ»»
+			HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);    //åˆ‡æ¢é—ªçƒæˆ–è€…å‘¼å¸
 			HAL_Delay(400);
 		}
 		for(int sumTime = 0, changeTime = -200; chooseLEDmode == breathingMode;){
-				for(int timeCount2 = 0; timeCount2 < 10; timeCount2++){  //·Ö10´ÎÁÁÃğ£¬Ê¹µÃºôÎüĞ§¹û×ÔÈ»
+				for(int timeCount2 = 0; timeCount2 < 10; timeCount2++){  //é€šè¿‡LEDç¯çš„äº®ç­æ¥è¾¾åˆ°ç›¸åº”çš„æ•ˆæœ
 					HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 					millisecondDelay(sumTime/10);
 					HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
@@ -167,7 +167,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)//Íâ²¿ÖĞ¶Ï»Øµ÷º¯Êı
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)    //åˆ‡æ¢æ¨¡å¼
  {
 	 //
 		if(chooseLEDmode == flashingMode){
@@ -177,7 +177,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)//Íâ²¿ÖĞ¶Ï»Øµ÷º¯Êı
 		}
  }
  
-void millisecondDelay(uint32_t millisecond)//Î¢Ãë¼¶ÑÓÊ±º¯Êı
+void millisecondDelay(uint32_t millisecond)    //å»¶æ—¶å‡½æ•°
 {
     uint32_t delay = (HAL_RCC_GetHCLKFreq() / 4000000 * millisecond);
     while (delay--)

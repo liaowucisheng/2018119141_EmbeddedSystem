@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>KEYControlBreathAndTwinkle</TargetName>
+    <TargetName>breathingOrFlashing</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
